@@ -1,16 +1,16 @@
-// // ESERCIZIO 1
+// ESERCIZIO 1
 
-// var emailUtente = prompt('Inserisci la tua email');
-// var lista = ['ciao@gmail.com', 'bella@gmail.com', 'sole@gmail.com', 'fra@gmail.com', 'buba@gmail.com'];
-// var esitoRicerca = "Email non esistente";
+var emailUtente = prompt('Inserisci la tua email');
+var lista = ['ciao@gmail.com', 'bella@gmail.com', 'sole@gmail.com', 'fra@gmail.com', 'buba@gmail.com'];
+var esitoRicerca = "Email non esistente";
 
-// for (let i = 0; i < lista.length; i++) {
-//     if (lista[i] == emailUtente) {
-//         esitoRicerca = "Email esistente";
-//     }    
-// }
+for (let i = 0; i < lista.length; i++) {
+    if (lista[i] == emailUtente) {
+        esitoRicerca = "Email esistente";
+    }    
+}
 
-// document.getElementById('risultato').innerHTML = esitoRicerca;
+document.getElementById('risultato').innerHTML = esitoRicerca;
 
 
 
@@ -29,8 +29,11 @@ for (let i = 0; i < listaCognomi.length; i++) {
 listaCognomi.sort();
 console.log(listaCognomi);
 
-for (let i = 0; i < listaCognomi.length; i++) {
+var trovato = false;
+
+for (let i = 0; i < listaCognomi.length && trovato == false; i++) {
     if (listaCognomi[i] == cognomeUtente) {
         console.log('La posizione del tuo cognome nella lista ordinata é ', i+1);
+        trovato = true;
     }
 }
